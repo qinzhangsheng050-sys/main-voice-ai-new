@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratitude Board | MainVoice AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="global.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header animate-in">
+            <a href="index.html" class="logo"><span class="logo-icon">&#9679;</span><span class="logo-text">MainVoice<span class="logo-accent">AI</span></span></a>
+            <nav class="nav">
+                <!-- Home Dropdown -->
+                <div class="dropdown">
+                    <a href="index.html" class="dropbtn page-link">Home ▼</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#chat-section">Chat</a>
+                        <a href="index.html#crisis">Crisis Help</a>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="dropdown">
+                    <a href="resources.html" class="dropbtn page-link">Resources ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mood-tracker.html">Mood Tracker</a>
+                        <a href="self-help-manual.html">Self-Help Manual</a>
+                        <a href="research.html">Research Insights</a>
+                        <a href="letter-generator.html">Letter Generator</a>
+                        <a href="gratitude-board.html">Gratitude Board</a>
+                        <a href="micro-habits.html">Daily Micro-Habits</a>
+                    </div>
+                </div>
+
+                <a href="pricing.html" class="page-link dropbtn" style="color: var(--color-coral); font-weight: bold;">Upgrade ✨</a>
+                <a href="about.html" class="page-link dropbtn">About</a>
+
+                <div class="theme-toggles">
+                    <button class="theme-ball light-ball" onclick="setThemeContext('light')" aria-label="Light Theme" title="Light Theme"></button>
+                    <button class="theme-ball dark-ball" onclick="setThemeContext('dark')" aria-label="Dark Theme" title="Dark Theme"></button>
+                    <button class="theme-ball warm-ball" onclick="setThemeContext('warm')" aria-label="Warm Sage Theme" title="Warm Sage Theme" style="background:linear-gradient(135deg,#6b8f71,#e8856a);"></button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Gratitude Header -->
+        <section class="page-header animate-in" style="animation-delay: 0.1s; padding-bottom: 2rem;">
+            <h1>Gratitude <em style="font-style: italic; background: linear-gradient(120deg, var(--color-sage), var(--color-coral)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Board</em></h1>
+            <p class="hero-subtitle" style="margin: 0 auto; text-align: center;">When things feel heavy, look back at the light. A private space to remember the good.</p>
+        </section>
+
+        <!-- Input Area -->
+        <section class="generator-section animate-in" style="animation-delay: 0.2s; padding: 0 3rem 2rem;">
+            <div class="card" style="max-width: 600px; margin: 0 auto; padding: 2rem; background: var(--color-bg-elevated); border-radius: var(--radius); text-align: center;">
+                <h3 style="margin-bottom: 1rem; color: var(--color-sage-dark);">What are you thankful for today? 🌻</h3>
+                <textarea id="gratitude-input" rows="3" placeholder="I am grateful for..." style="width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid var(--color-border); background: var(--color-bg); color: var(--color-text); font-family: var(--font-sans); outline: none; resize: vertical; margin-bottom: 1rem; font-size: 1.05rem;"></textarea>
+                
+                <div id="ai-response-area" style="display: none; padding: 1rem; background: var(--color-sage-light); border-radius: 8px; color: var(--color-sage-dark); font-weight: 500; font-size: 0.95rem; margin-bottom: 1rem; text-align: left; animation: fadeIn 0.4s ease;">
+                    <!-- Direct AI positive reinforcement appears here -->
+                </div>
+
+                <button id="post-gratitude-btn" class="cta-button" style="width: 100%; justify-content: center; display: flex; align-items: center; gap: 0.5rem; border-radius: 12px; padding: 1rem;">
+                    Pin to Board ✨
+                </button>
+            </div>
+        </section>
+
+        <!-- Board Area for Sticky Notes -->
+        <section class="board-section animate-in" style="animation-delay: 0.3s; padding: 2rem 3rem 6rem;">
+            <div id="gratitude-board-container" class="gratitude-board">
+                <!-- Dynamically added .sticky-note items go here -->
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="logo">
+                    <span class="logo-icon">&#9679;</span>
+                    <span class="logo-text">MainVoice<span class="logo-accent">AI</span></span>
+                </div>
+                <p>Supporting mental wellness through empathy and evidence.</p>
+                <p class="footer-note">&copy; MainVoice AI. Not a substitute for professional mental health care.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+    <script src="ai-engine.js"></script>
+    <script src="gratitude-board.js"></script>
+</body>
+</html>

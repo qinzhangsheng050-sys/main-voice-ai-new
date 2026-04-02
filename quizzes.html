@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes - MainVoice AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="global.js"></script>
+</head>
+<body>
+    <div id="page-transition" class="page-transition"></div>
+
+            <header class="header animate-in">
+            <a href="index.html" class="logo"><span class="logo-icon">&#9679;</span><span class="logo-text">MainVoice<span class="logo-accent">AI</span></span></a>
+            <nav class="nav">
+                <!-- Home Dropdown -->
+                <div class="dropdown">
+                    <a href="index.html" class="dropbtn page-link">Home ▼</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#chat-section">Chat</a>
+                        <a href="index.html#crisis">Crisis Help</a>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="dropdown">
+                    <a href="resources.html" class="dropbtn page-link">Resources ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mood-tracker.html">Mood Tracker</a>
+                        <a href="self-help-manual.html">Self-Help Manual</a>
+                        <a href="research.html">Research Insights</a>
+                        <a href="letter-generator.html">Letter Generator</a>
+                        <a href="gratitude-board.html">Gratitude Board</a>
+                        <a href="micro-habits.html">Daily Micro-Habits</a>
+                    </div>
+                </div>
+
+                <a href="pricing.html" class="page-link dropbtn" style="color: var(--color-coral); font-weight: bold;">Upgrade ✨</a>
+                <a href="about.html" class="page-link dropbtn">About</a>
+
+                <div class="theme-toggles">
+                    <button class="theme-ball light-ball" onclick="setThemeContext('light')" aria-label="Light Theme" title="Light Theme"></button>
+                    <button class="theme-ball dark-ball" onclick="setThemeContext('dark')" aria-label="Dark Theme" title="Dark Theme"></button>
+                    <button class="theme-ball warm-ball" onclick="setThemeContext('warm')" aria-label="Warm Sage Theme" title="Warm Sage Theme" style="background:linear-gradient(135deg,#6b8f71,#e8856a);"></button>
+                </div>
+            </nav>
+        </header>
+
+    <main class="container animate-in" style="animation-delay: 0.1s;">
+        <section class="page-header" style="padding-top:7rem;padding-bottom:2rem;">
+            <h1>Self-Assessments</h1>
+            <p class="subtitle">Choose a focused check‑in: everyday life stress or study‑related stress.</p>
+        </section>
+
+        <section class="grid" style="margin-top:2rem;">
+            <a href="quiz-life.html" class="card">
+                <span class="card-icon">🧩</span>
+                <h3>Life Stress Assessment</h3>
+                <p>Understand how general life events, responsibilities, and unexpected changes have been affecting your feelings lately.</p>
+            </a>
+
+            <a href="quiz-study.html" class="card">
+                <span class="card-icon">📚</span>
+                <h3>Study Stress Assessment</h3>
+                <p>Explore the pressure from homework, exams, grades, and expectations—and how they are shaping your stress level.</p>
+            </a>
+        </section>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="resources.html" class="back-floating-btn page-link">
+                <span class="icon">⟵</span>
+                <span class="text">Back to Resources</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="logo"><span class="logo-icon">&#9679;</span>MainVoice<span class="logo-accent">AI</span></div>
+        <p>Empathetic mental health support.</p>
+        <p class="footer-note">If you are in crisis, please call 911 or localized emergency services immediately.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>

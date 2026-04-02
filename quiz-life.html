@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Stress Assessment - MainVoice AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="global.js"></script>
+</head>
+<body>
+    <div id="page-transition" class="page-transition"></div>
+
+            <header class="header animate-in">
+            <a href="index.html" class="logo"><span class="logo-icon">&#9679;</span><span class="logo-text">MainVoice<span class="logo-accent">AI</span></span></a>
+            <nav class="nav">
+                <!-- Home Dropdown -->
+                <div class="dropdown">
+                    <a href="index.html" class="dropbtn page-link">Home ▼</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#chat-section">Chat</a>
+                        <a href="index.html#crisis">Crisis Help</a>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="dropdown">
+                    <a href="resources.html" class="dropbtn page-link">Resources ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mood-tracker.html">Mood Tracker</a>
+                        <a href="self-help-manual.html">Self-Help Manual</a>
+                        <a href="research.html">Research Insights</a>
+                        <a href="letter-generator.html">Letter Generator</a>
+                        <a href="gratitude-board.html">Gratitude Board</a>
+                        <a href="micro-habits.html">Daily Micro-Habits</a>
+                    </div>
+                </div>
+
+                <a href="pricing.html" class="page-link dropbtn" style="color: var(--color-coral); font-weight: bold;">Upgrade ✨</a>
+                <a href="about.html" class="page-link dropbtn">About</a>
+
+                <div class="theme-toggles">
+                    <button class="theme-ball light-ball" onclick="setThemeContext('light')" aria-label="Light Theme" title="Light Theme"></button>
+                    <button class="theme-ball dark-ball" onclick="setThemeContext('dark')" aria-label="Dark Theme" title="Dark Theme"></button>
+                    <button class="theme-ball warm-ball" onclick="setThemeContext('warm')" aria-label="Warm Sage Theme" title="Warm Sage Theme" style="background:linear-gradient(135deg,#6b8f71,#e8856a);"></button>
+                </div>
+            </nav>
+        </header>
+
+    <main class="container animate-in" style="animation-delay:0.12s;">
+        <section class="page-header" style="padding-top:7rem;padding-bottom:2rem;">
+            <h1>Life Stress Assessment</h1>
+            <p class="subtitle">A brief check‑in about how everyday events have been affecting you over the past month.</p>
+        </section>
+
+        <section class="card" style="margin-top:2rem;">
+            <form id="life-stress-form">
+                <div class="question-card">
+                    <h3>1. In the last month, how often have you been upset because of something that happened unexpectedly?</h3>
+                    <div class="custom-options">
+                        <label class="custom-radio"><input type="radio" name="ls_q1" value="0" required><span class="radio-mark"></span><span class="radio-text">Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q1" value="1"><span class="radio-mark"></span><span class="radio-text">Almost Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q1" value="2"><span class="radio-mark"></span><span class="radio-text">Sometimes</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q1" value="3"><span class="radio-mark"></span><span class="radio-text">Fairly Often</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q1" value="4"><span class="radio-mark"></span><span class="radio-text">Very Often</span></label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>2. In the last month, how often have you felt that you were unable to control the important things in your life?</h3>
+                    <div class="custom-options">
+                        <label class="custom-radio"><input type="radio" name="ls_q2" value="0" required><span class="radio-mark"></span><span class="radio-text">Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q2" value="1"><span class="radio-mark"></span><span class="radio-text">Almost Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q2" value="2"><span class="radio-mark"></span><span class="radio-text">Sometimes</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q2" value="3"><span class="radio-mark"></span><span class="radio-text">Fairly Often</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q2" value="4"><span class="radio-mark"></span><span class="radio-text">Very Often</span></label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>3. In the last month, how often have you felt nervous and "stressed"?</h3>
+                    <div class="custom-options">
+                        <label class="custom-radio"><input type="radio" name="ls_q3" value="0" required><span class="radio-mark"></span><span class="radio-text">Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q3" value="1"><span class="radio-mark"></span><span class="radio-text">Almost Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q3" value="2"><span class="radio-mark"></span><span class="radio-text">Sometimes</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q3" value="3"><span class="radio-mark"></span><span class="radio-text">Fairly Often</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q3" value="4"><span class="radio-mark"></span><span class="radio-text">Very Often</span></label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>4. In the last month, how often have you felt confident about your ability to handle your personal problems?</h3>
+                    <div class="custom-options">
+                        <label class="custom-radio"><input type="radio" name="ls_q4" value="0" required><span class="radio-mark"></span><span class="radio-text">Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q4" value="1"><span class="radio-mark"></span><span class="radio-text">Almost Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q4" value="2"><span class="radio-mark"></span><span class="radio-text">Sometimes</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q4" value="3"><span class="radio-mark"></span><span class="radio-text">Fairly Often</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q4" value="4"><span class="radio-mark"></span><span class="radio-text">Very Often</span></label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <h3>5. In the last month, how often have you felt that things were going your way?</h3>
+                    <div class="custom-options">
+                        <label class="custom-radio"><input type="radio" name="ls_q5" value="0" required><span class="radio-mark"></span><span class="radio-text">Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q5" value="1"><span class="radio-mark"></span><span class="radio-text">Almost Never</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q5" value="2"><span class="radio-mark"></span><span class="radio-text">Sometimes</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q5" value="3"><span class="radio-mark"></span><span class="radio-text">Fairly Often</span></label>
+                        <label class="custom-radio"><input type="radio" name="ls_q5" value="4"><span class="radio-mark"></span><span class="radio-text">Very Often</span></label>
+                    </div>
+                </div>
+
+                <button type="button" class="submit-quiz-btn" onclick="calculateLifeStress()">Calculate My Score</button>
+                <div id="ls-error" class="quiz-error" style="display:none; color: var(--color-coral); margin-top: 1rem; text-align: center;">Please answer all questions before calculating your score.</div>
+            </form>
+
+            <div id="life-stress-result" class="styled-result-box" style="display: none;">
+                <div class="score-circle">
+                    <span id="ls-score-display" class="score-number">0</span>
+                    <span class="score-max">/ 20</span>
+                </div>
+                <div class="result-details">
+                    <h3 id="ls-status-title">Status</h3>
+                    <p id="ls-interpretation"></p>
+                </div>
+                <button class="retry-btn" onclick="resetQuiz('life-stress')">Take Again</button>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="resources.html" class="back-floating-btn page-link">
+                <span class="icon">⟵</span>
+                <span class="text">Back to Resources</span>
+            </a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="logo"><span class="logo-icon">&#9679;</span>MainVoice<span class="logo-accent">AI</span></div>
+        <p>Empathetic mental health support.</p>
+        <p class="footer-note">If you are in crisis, please call 911 or localized emergency services immediately.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
+

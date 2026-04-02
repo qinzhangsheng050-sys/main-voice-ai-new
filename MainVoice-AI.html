@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MainVoice AI — Your Mental Health Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="page-transition" class="page-transition"></div>
+            <header class="header animate-in">
+            <a href="index.html" class="logo"><span class="logo-icon">&#9679;</span><span class="logo-text">MainVoice<span class="logo-accent">AI</span></span></a>
+            <nav class="nav">
+                <!-- Home Dropdown -->
+                <div class="dropdown">
+                    <a href="index.html" class="dropbtn page-link">Home ▼</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#chat-section">Chat</a>
+                        <a href="index.html#crisis">Crisis Help</a>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="dropdown">
+                    <a href="resources.html" class="dropbtn page-link">Resources ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mood-tracker.html">Mood Tracker</a>
+                        <a href="self-help-manual.html">Self-Help Manual</a>
+                        <a href="research.html">Research Insights</a>
+                        <a href="letter-generator.html">Letter Generator</a>
+                        <a href="gratitude-board.html">Gratitude Board</a>
+                        <a href="micro-habits.html">Daily Micro-Habits</a>
+                    </div>
+                </div>
+
+                <a href="pricing.html" class="page-link dropbtn" style="color: var(--color-coral); font-weight: bold;">Upgrade ✨</a>
+                <a href="about.html" class="page-link dropbtn">About</a>
+
+                <div class="theme-toggles">
+                    <button class="theme-ball light-ball" onclick="setThemeContext('light')" aria-label="Light Theme" title="Light Theme"></button>
+                    <button class="theme-ball dark-ball" onclick="setThemeContext('dark')" aria-label="Dark Theme" title="Dark Theme"></button>
+                    <button class="theme-ball warm-ball" onclick="setThemeContext('warm')" aria-label="Warm Sage Theme" title="Warm Sage Theme" style="background:linear-gradient(135deg,#6b8f71,#e8856a);"></button>
+                </div>
+            </nav>
+        </header>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Your Mental Health, <em>Your Voice</em></h1>
+            <p class="hero-subtitle">A safe, compassionate space for support. MainVoice AI offers empathetic listening,
+                evidence-based CBT guidance, and connection to professional help when you need it most.</p>
+            <div class="hero-features">
+                <span class="feature-pill">CBT-Informed Support</span>
+                <span class="feature-pill">Empathetic Listening</span>
+                <span class="feature-pill">Crisis Referrals</span>
+            </div>
+            <button class="cta-button"
+                onclick="document.getElementById('chat-section').scrollIntoView({behavior:'smooth'})">Start a
+                Conversation</button>
+        </div>
+    </section>
+    <section class="topics">
+        <h2>We Address What Matters</h2>
+        <div class="topics-grid">
+            <div class="topic-card">
+                <div class="topic-card-img"
+                    style="background-image:url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80')">
+                </div>
+                <div class="topic-card-body">
+                    <div class="topic-icon">&#128241;</div>
+                    <h3>Social Media Impact</h3>
+                    <p>Understanding how social media affects mental health&mdash;comparison, FOMO, and strategies for
+                        healthier digital habits.</p>
+                </div>
+            </div>
+            <div class="topic-card">
+                <div class="topic-card-img"
+                    style="background-image:url('https://images.unsplash.com/photo-1564121211835-e88c852648ab?w=600&q=80')">
+                </div>
+                <div class="topic-card-body">
+                    <div class="topic-icon">&#9729;</div>
+                    <h3>Depression &amp; Anxiety</h3>
+                    <p>Exploring causes, triggers, and coping strategies. You're not alone in this journey.</p>
+                </div>
+            </div>
+            <div class="topic-card">
+                <div class="topic-card-img"
+                    style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80')">
+                </div>
+                <div class="topic-card-body">
+                    <div class="topic-icon">&#127968;</div>
+                    <h3>Parent &amp; School Support</h3>
+                    <p>Intervention strategies for families and educators to support young people's mental wellness.</p>
+                </div>
+            </div>
+            <div class="topic-card">
+                <div class="topic-card-img"
+                    style="background-image:url('https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?w=600&q=80')">
+                </div>
+                <div class="topic-card-body">
+                    <div class="topic-icon">&#128737;</div>
+                    <h3>Prevention Programs</h3>
+                    <p>Building resilience and early intervention to protect mental health before crises develop.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="chat-section" class="chat-section">
+        <div class="chat-container">
+            <div class="chat-header">
+                <div class="chat-logo"><span class="logo-icon">&#9679;</span> MainVoice AI</div>
+                <p class="chat-tagline">I'm here to listen. Ask me about mental health, coping strategies, or anything
+                    on your mind.</p>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message ai-message">
+                    <div class="message-avatar">&#9679;</div>
+                    <div class="message-content">
+                        <p>Hello. I'm MainVoice AI, your mental health companion. I'm here to offer empathetic support
+                            and evidence-based guidance.</p>
+                        <p>You can talk to me about: stress from social media, feelings of depression or anxiety, how
+                            parents or schools can help, coping strategies and prevention.</p>
+                        <p><strong>If you're in crisis</strong>, please reach out to a professional&mdash;I'll show you
+                            crisis resources when you need them. How are you feeling today?</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area" style="position: relative; flex-direction: column; gap: 0; padding: 0;">
+                
+                <div
+                    style="display: flex; align-items: flex-end; width: 100%; padding: 10px; gap: 10px; box-sizing: border-box;">
+                    <button id="model-switch-btn" class="send-btn" aria-label="Switch Model"></button>
+                    
+                    
+
+                    <textarea id="chat-input" placeholder="Share what's on your mind..." rows="2"
+                        style="flex: 1; border: none; background: transparent; resize: none; outline: none; padding: 10px; min-height: 44px;"></textarea>
+
+                    <button id="send-btn" class="send-btn" aria-label="Send">&#8599;</button>
+                </div>
+            </div>
+            <p class="chat-disclaimer">MainVoice AI provides support, not professional diagnosis. If you're in crisis,
+                contact emergency services or a crisis hotline.</p>
+        </div>
+    </section>
+    <section id="crisis" class="crisis-section">
+        <h2>If You Need Immediate Help</h2>
+        <p class="crisis-intro">Your safety matters. If you're experiencing a mental health crisis, please reach out to
+            these resources:</p>
+        <div class="crisis-cards">
+            <a href="https://foundrybc.ca" target="_blank" rel="noopener" class="crisis-card crisis-primary">
+                <h3>Foundry BC</h3>
+                <p>Integrated youth health services across British Columbia. Mental health, substance use, and primary
+                    care.</p>
+                <span class="crisis-link">Visit Foundry BC &#8594;</span>
+            </a>
+            <div class="crisis-card">
+                <h3>Crisis Services Canada</h3>
+                <p>24/7: Call <strong>1-833-456-4566</strong> or text <strong>45645</strong></p>
+            </div>
+            <div class="crisis-card">
+                <h3>Kids Help Phone</h3>
+                <p>1-800-668-6868 &mdash; 24/7. Text CONNECT to 686868</p>
+            </div>
+            <div class="crisis-card">
+                <h3>Emergency</h3>
+                <p>If in immediate danger: <strong>911</strong></p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="logo"><span class="logo-icon">&#9679;</span><span class="logo-text">MainVoice<span
+                    class="logo-accent">AI</span></span></div>
+        <p>Supporting mental wellness through empathy and evidence.</p>
+        <p class="footer-note" style="margin-top:1rem;font-size:0.8rem;opacity:0.7">&copy; MainVoice AI. Not a
+            substitute for professional mental health care.</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Mental Health Research — MainVoice AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <script src="global.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="page-transition" class="page-transition"></div>
+            <header class="header animate-in">
+            <a href="index.html" class="logo"><span class="logo-icon">&#9679;</span><span class="logo-text">MainVoice<span class="logo-accent">AI</span></span></a>
+            <nav class="nav">
+                <!-- Home Dropdown -->
+                <div class="dropdown">
+                    <a href="index.html" class="dropbtn page-link">Home ▼</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#chat-section">Chat</a>
+                        <a href="index.html#crisis">Crisis Help</a>
+                    </div>
+                </div>
+
+                <!-- Resources Dropdown -->
+                <div class="dropdown">
+                    <a href="resources.html" class="dropbtn page-link">Resources ▼</a>
+                    <div class="dropdown-content">
+                        <a href="mood-tracker.html">Mood Tracker</a>
+                        <a href="self-help-manual.html">Self-Help Manual</a>
+                        <a href="research.html">Research Insights</a>
+                        <a href="letter-generator.html">Letter Generator</a>
+                        <a href="gratitude-board.html">Gratitude Board</a>
+                        <a href="micro-habits.html">Daily Micro-Habits</a>
+                    </div>
+                </div>
+
+                <a href="pricing.html" class="page-link dropbtn" style="color: var(--color-coral); font-weight: bold;">Upgrade ✨</a>
+                <a href="about.html" class="page-link dropbtn">About</a>
+
+                <div class="theme-toggles">
+                    <button class="theme-ball light-ball" onclick="setThemeContext('light')" aria-label="Light Theme" title="Light Theme"></button>
+                    <button class="theme-ball dark-ball" onclick="setThemeContext('dark')" aria-label="Dark Theme" title="Dark Theme"></button>
+                    <button class="theme-ball warm-ball" onclick="setThemeContext('warm')" aria-label="Warm Sage Theme" title="Warm Sage Theme" style="background:linear-gradient(135deg,#6b8f71,#e8856a);"></button>
+                </div>
+            </nav>
+        </header>
+    <main class="container">
+        <div class="page-header">
+            <h1>Youth Mental Health Research</h1>
+            <p class="subtitle">Evidence-based insights on adolescent mental wellness</p>
+        </div>
+
+        <div id="social-media" class="card">
+            <div class="card-img"
+                style="background-image:url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&q=80')">
+            </div>
+            <div class="card-body">
+                <h2>Social Media &amp; Adolescent Mental Health</h2>
+                <p>Large-scale studies (e.g., Orben &amp; Przybylski, 2022) show that the relationship between social
+                    media use and mental health is <strong>modest but meaningful</strong>. Effects vary by individual:
+                    some youth benefit from connection, while others experience increased anxiety, depression, and body
+                    image concerns.</p>
+                <p><strong>Key findings:</strong></p>
+                <ul>
+                    <li>Passive consumption (scrolling without interaction) correlates more strongly with lower
+                        well-being than active use.</li>
+                    <li>Comparison and FOMO are significant mediators—teens who frequently compare themselves to others
+                        online report higher depressive symptoms.</li>
+                    <li>Sleep displacement (using screens late at night) amplifies negative effects on mood and
+                        cognitive function.</li>
+                    <li>Algorithmic feeds that prioritize engagement can expose youth to harmful content and reinforce
+                        negative thought patterns.</li>
+                </ul>
+                <p class="cite">Sources: Orben &amp; Przybylski (2022), Nature; Haidt (2024), The Anxious Generation</p>
+            </div>
+        </div>
+
+        <div id="depression-anxiety" class="card">
+            <div class="card-img"
+                style="background-image:url('https://images.unsplash.com/photo-1564121211835-e88c852648ab?w=400&q=80')">
+            </div>
+            <div class="card-body">
+                <h2>Causes of Depression &amp; Anxiety in Youth</h2>
+                <p>Research indicates a <strong>biopsychosocial model</strong>: genetics, brain development, life
+                    stress, and environment interact.</p>
+                <ul>
+                    <li><strong>Developmental:</strong> Adolescence involves significant brain restructuring; the
+                        amygdala (emotion) matures before the prefrontal cortex (regulation), increasing vulnerability
+                        to emotional dysregulation.</li>
+                    <li><strong>Environmental:</strong> Academic pressure, social conflict, family stress, and adverse
+                        childhood experiences (ACEs) are robust predictors.</li>
+                    <li><strong>Digital environment:</strong> Constant connectivity, cyberbullying, and curated
+                        perfection can fuel rumination and social anxiety.</li>
+                    <li><strong>Protective factors:</strong> Strong relationships, sleep, physical activity, and a sense
+                        of purpose buffer against depression and anxiety.</li>
+                </ul>
+                <p class="cite">Sources: WHO; Kessler et al.; Canadian Mental Health Association</p>
+            </div>
+        </div>
+
+        <div id="school-parent" class="card">
+            <div class="card-img"
+                style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80')">
+            </div>
+            <div class="card-body">
+                <h2>School &amp; Parent Intervention Strategies</h2>
+                <p>Evidence supports <strong>multi-tiered, whole-community approaches</strong>.</p>
+                <ul>
+                    <li><strong>Universal prevention:</strong> Mental health literacy programs, stress management
+                        curricula, and anti-stigma campaigns improve help-seeking and early identification.</li>
+                    <li><strong>Targeted support:</strong> School-based CBT and mindfulness programs show effectiveness
+                        for mild-to-moderate anxiety and depression.</li>
+                    <li><strong>Parent involvement:</strong> Parent training in emotion coaching, validation, and
+                        non-punitive communication reduces conflict and improves youth outcomes.</li>
+                    <li><strong>Integration:</strong> Models like Foundry BC integrate mental health, primary care, and
+                        substance use services—reducing barriers for youth who need multiple supports.</li>
+                </ul>
+                <p class="cite">Sources: Werner-Seidler et al.; School Mental Health Ontario; Foundry BC evaluation
+                    reports</p>
+            </div>
+        </div>
+
+        <div id="prevention" class="card">
+            <div class="card-img"
+                style="background-image:url('https://images.unsplash.com/photo-1536623975707-c4b3b2af565d?w=400&q=80')">
+            </div>
+            <div class="card-body">
+                <h2>Prevention Programs: What Works</h2>
+                <p>Systematic reviews identify several evidence-based prevention approaches:</p>
+                <ul>
+                    <li><strong>Cognitive-Behavioural (CBT) prevention:</strong> Teaches youth to identify and challenge
+                        unhelpful thoughts and behaviours; reduces incidence of depression and anxiety in at-risk
+                        populations.</li>
+                    <li><strong>Mindfulness-based programs:</strong> Improve emotional regulation and reduce stress;
+                        effects are stronger when practiced consistently.</li>
+                    <li><strong>Resilience programs:</strong> Build coping skills, social support, and problem-solving;
+                        most effective when delivered early and reinforced over time.</li>
+                    <li><strong>Digital interventions:</strong> Apps and online programs can reach youth who avoid
+                        in-person services, but should complement—not replace—professional care.</li>
+                </ul>
+                <p class="cite">Sources: Calear &amp; Christensen; Merry et al.; Cuijpers et al.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="index.html" class="back-floating-btn page-link">
+                <span class="icon">⟵</span>
+                <span class="text">Back to Home</span>
+            </a>
+        </div>
+    </main>
+</body>
+
+</html>
